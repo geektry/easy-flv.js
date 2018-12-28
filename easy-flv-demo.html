@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>easy-flv.js Demo</title>
+</head>
+<body>
+<video width="800px" height="450px" id="player" controls></video>
+<br>
+<input type="text" id="play-url" style="width: 749px;">
+<button type="button" id="play-button">Play</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js"></script>
+<script src="easy-flv.js"></script>
+<script>
+    new EasyFlvJs({
+        playVideoElementId: 'player',
+        playUrlInputElementId: 'play-url',
+        playButtonElementId: 'play-button'
+    });
+</script>
+</body>
+</html>
