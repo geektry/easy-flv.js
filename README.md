@@ -1,22 +1,26 @@
 # easy-flv.js
 
-## 1. Features
+#### 1. Features
 
 - Provide a easier way to use [Bilibili/flv.js](https://github.com/Bilibili/flv.js)
 - Support simple statistics info outputted in console
 - Automatic reload player when network is unstable
 
-## 2. Installation
+#### 2. Get Started
 
 Please refer to [easy-flv-demo.html](https://github.com/geektry/easy-flv.js/blob/master/easy-flv-demo.html)
 
-## 3. Getting Started
+#### 3. Documents
+
+##### 3.1 Configurations
 
 ```javascript
-new EasyFlvJs({
-    // here to go
-})
+const easyFlvJs = new EasyFlvJs({
+    parameter: value
+});
 ```
+
+Parameters
 
 |Parameter                |Necessary|Type  |Default|Description|
 |-------------------------|---------|------|-------|-----------|
@@ -27,3 +31,16 @@ new EasyFlvJs({
 |taskCycleSeconds         |O        |Number|5      |The statistics info will be outputted in console every `[N]`s|
 |maxReloadDelayCycles     |O        |Number|2      |If decoded frames do not increase after `[N]` cycles, the player will be reloaded|
 |maxBufferedFrameSeconds  |O        |Number|5      |If number of buffered frame seconds is over than `[N]`s, the player will be reloaded|
+
+##### 3.2 Methods
+
+```javascript
+easyFlvJs.method();
+```
+
+Methods
+
+|Method     |Description|
+|-----------|-----------|
+|void init()|Init player with given configuration|
+|void play()|Play live stream|
